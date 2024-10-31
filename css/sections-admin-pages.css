@@ -1,0 +1,55 @@
+@import url(admin-page/business.css);
+@import url(admin-page/reports.css);
+@import url(admin-page/customers.css);
+
+.content {
+  padding-top: 20px;
+  border-radius: 25px 25px 0 0;
+  background: #fff;
+}
+.content-input {
+  max-width: 540px;
+  margin: 0 auto 20px;
+}
+.content-input-inner {
+  border: 1px solid #979595;
+  border-radius: 10px;
+  width: 100%;
+  text-align: right;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  color: #716b6b;
+  padding: 11px 13px;
+}
+.content-info {
+  background: #dbeded;
+}
+
+.content-info-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-info-text {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+}
+.curent-section {
+  font-weight: 700;
+}
+.content-info-func {
+  display: flex;
+  gap: 30px;
+}
+.content-info-func-img {
+  cursor: pointer;
+}
+
+
+

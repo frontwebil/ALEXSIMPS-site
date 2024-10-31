@@ -1,0 +1,10 @@
+.my-Customer-list{
+  background-color: #ffffff;
+  padding-bottom: 20vh;
+  display: none;
+}
+
+.my-Customer-list.active{
+  display: block;
+  animation: show 1s 1;
+}

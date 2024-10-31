@@ -1,0 +1,32 @@
+@import url(css/admin-page/admin-page.css);
+@import url(css/login-page.css);
+@import url(css/sections-admin-pages.css);
+@import url(css/reset.css);
+@import url(css/brocker-page/brocker-page.css);
+@import url(css/brocker-page/myProfile-Customer-list.css);
+
+/* body{
+  background: linear-gradient(
+    180deg,
+    #f0dce4 0%,
+    #e0dce4 59%,
+    #e0dce4 73.6%,
+    #e0dce4 100%
+  );
+} */
+
+.log-out {
+  font-weight: 300;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 30px;
+  background: #10bc84;
+  padding: 5px 35px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <title>ALEXSIMPS</title>
+</head>
+
+<body>
+  <section class="login-page active">
+    <header class="header">
+      <h2 class="header-logo-bold">
+        ALEX<span style="font-weight: 400;">CIMPS</span>
+      </h2>
+      <nav class="header-nav">
+        <p class="nav-button">Works with Us</p>
+        <p class="nav-button">API</p>
+        <p class="nav-button">Customer</p>
+        <p class="nav-button">Agent</p>
+      </nav>
+    </header>
+    <main class="login-page-main">
+      <img src="image/login-page/main-content-img.jpg" alt="" class="login-page-main-img">
+      <div class="login-page-main-text">
+        <h2 class="login-page-main-text-title">Cloud-based CRM system</h2>
+        <p class="login-page-main-text-text">It designed specifically for insurance brokers, offering an intuitive
+          interface for managing policies. It provides quick access to essential data and settings, significantly
+          improving agents' efficiency and enhancing client interactions, while streamlining insurance policy management
+          processes.</p>
+        <div class="login-page-main-text-bottom">
+          <div class="login-page-main-text-bottom-row-img">
+            <a href="https://play.google.com/store/apps?hl=uk" style="max-height: 185px;">
+              <img src="image/login-page/playMarket.png" alt="" class="login-page-main-text-bottom-row-img">
+            </a>
+            <a href="https://apps.apple.com/ru/developer/apple/id284417353?mt=12" style="max-height: 185px;">
+              <img src="image/login-page/Appstore.png" alt="" class="login-page-main-text-bottom-row-img">
+            </a>
+          </div>
+          <form class="login-form">
+            <input type="text" name="" id="login-input-login" class="login-form-input" placeholder="Login">
+            <input type="text" name="" id="login-input-password" class="login-form-input" placeholder="Password">
+            <p class="status-form-login" id="login-form-status">. <br><br></p>
+            <button class="login-form-button" id="login-form-button">Login</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-img-row">
+        <img src="image/login-page/fb-footer.svg" alt="" class="footer-img-row-image">
+        <img src="image/login-page/twit-footer.svg" alt="" class="footer-img-row-image">
+        <img src="image/login-page/inst-footer.svg" alt="" class="footer-img-row-image">
+        <img src="image/login-page/youtube-footer.svg" alt="" class="footer-img-row-image">
+      </div>
+    </footer>
+  </section>
+
+  <section class="admin-page">
+    <header class="header">
+      <h2 class="header-logo-bold">
+        ALEX<span style="font-weight: 400;">CIMPS</span>
+      </h2>
+      <nav class="header-nav">
+        <p class="nav-button" data-nav="admin-Business">Business</p>
+        <p class="nav-button focus" data-nav="admin-Customers">Customers</p>
+        <p class="nav-button" data-nav="admin-Reports" id="nav-admin-rep">Reports</p>
+        <p class="nav-button" data-nav="admin-Settings" id="nav-admin-set">Settings</p>
+        <button class="log-out" id="log-out">Logout</button>
+      </nav>
+    </header>
+
+    <div class="nav-site" id="admin-Settings" >
+      <section class="settings-section">
+        <div class="contols-panel">
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image admin-img" id="admin-img">
+            <p class="user-info-text admin-name" id="admin-name">Gil Dvir</p>
+          </div>
+        </div>
+        <div class="settings-swiper">
+          <div class="contols-admin-button-swiper-left">
+            <img src="image/icons/button-swiper-prev.svg" alt="" class="contols-button-swiper-image">
+            <p class="control-text-swiper">Back</p>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="slider-admin-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Step 1.</span> Select the buttons you
+                need for the quick access menu.</p>
+              <div class="slider-wrapper-content">
+                <div class="slider-wrapper-content-card">
+                  <h3 class="slider-wrapper-content-card-title">Check Customer</h3>
+                  <img src="image/slider/slide-1-1.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background-color: #FF5454;">
+                  <h3 class="slider-wrapper-content-card-title">Add Meeting</h3>
+                  <img src="image/slider/slide-1-2.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button ">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background: #08ccd4;">
+                  <h3 class="slider-wrapper-content-card-title">Compare Policies</h3>
+                  <img src="image/slider/slide-1-3.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button nav-rep-button">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background: #d0e46c;">
+                  <h3 class="slider-wrapper-content-card-title">Compare Policies</h3>
+                  <img src="image/slider/slide-1-4.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button nav-rep-button">Add</button>
+                </div>
+              </div>
+            </div>
+            <div class="slider-admin-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Step 2.</span> Select the buttons you
+                need for the quick access menu.</p>
+              <div class="slider-wrapper-content" style="align-items: center;">
+                <img src="image/slider/slide-2-main.png" alt="" class="swiper-wrapper-slide-form-img">
+                <div class="swiper-wrapper-slide-form">
+                  <input type="text" name="" id="" class="swiper-wrapper-slide-form-input"
+                    placeholder="Google Drive Contact List">
+                  <button class="swiper-wrapper-slide-form-button">Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="slider-admin-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Here, you will find the user role
+                  settings, where you can assign permissions and restrictions to users based on their roles in the
+                  system.</p>
+              <div class="slider-wrapper-cards">
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title">Finance</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Oversees financial <br>
+                    reporting and payments.</h3>
+                  <p class="slider-wrapper-card-text">Responsible for overseeing financial reporting, tracking payments,
+                    and ensuring the smooth processing of transactions.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #d0e46c;">HR Department</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Focuses on monitoring agent productivity.</h3>
+                  <p class="slider-wrapper-card-text">Manages system settings, assigns user roles, and controls
+                    permissions, ensuring that the system operates smoothly and securely.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #f8740c;">Administrator</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Manages system
+                    settings and user roles.</h3>
+                  <p class="slider-wrapper-card-text">Engage directly with clients, handling interactions, policy sales,
+                    and providing tailored insurance solutions.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #08ccac;">HR</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Focuses on monitoring agent productivity.</h3>
+                  <p class="slider-wrapper-card-text">Focuses on monitoring and improving agent productivity, ensuring
+                    the team is performing efficiently and meeting performance targets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contols-admin-button-swiper-right">
+            <img src="image/icons/button-swiper-next.svg" alt="" class="contols-button-swiper-image">
+            <p class="control-text-swiper">Next</p>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-img-row">
+            <img src="image/login-page/fb-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/twit-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/inst-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/youtube-footer.svg" alt="" class="footer-img-row-image">
+          </div>
+        </footer>
+      </section>
+    </div>
+
+
+    <div class="nav-site " id="admin-Reports" >
+      <section class="section">
+        <div class="contols-panel" style="justify-content: space-between;">
+          <div class="" style="width: 85px;height: 110px;"></div>
+          <div class="controls-panel">
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/1.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Check Customer</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/2.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Meeting</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/3.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Task</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/4.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Compare Policies</p>
+            </div>
+          </div>
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image admin-img">
+            <p class="user-info-text admin-name">Gil Dvir</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content-input">
+            <input type="text" placeholder="Search" class="content-input-inner">
+          </div>
+          <div class="content-info">
+            <div class="content-info-container">
+              <div class="content-info-text">
+                <p>Reports -&nbsp;</p>
+                <p class="curent-section admin-curent-section">Revenue Analytics</p>
+              </div>
+              <div class="content-info-func">
+                <img src="image/login-page/reports/func-1.svg" alt="" class="content-info-func-img">
+                <img src="image/login-page/reports/func-2.svg" alt="" class="content-info-func-img">
+                <img src="image/login-page/reports/func-3.svg" alt="" class="content-info-func-img">
+              </div>
+              <div class="" style="width: 175px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-for-color">
+          <div class="reports-tabs">
+            <div class="reports-tabs-titles">
+              <p class="reports-tabs-title-button reports-tabs-title-admin">Performance Indicators</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin">Policy Sales Metrics</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin">Policy Search & Comparison</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin" data-reports="reports-admin-clientOverview">Client Overview</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin" data-reports="reports-admin-AgentProductivity">Agent Productivity</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin active" data-reports="reports-admin-RevenueAnalytics">Revenue Analytics</p>
+            </div>
+            <div class="reports-tabs-content">
+
+              <div class="reports-tabs-content-block reports-tabs-сontent-admin active" id="reports-admin-RevenueAnalytics">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Revenue by Client Type</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Business: 18.725</div>
+                      <div class="reports-content-info-container-block-row-block">Private: 10.365</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">High-Value Clients</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Industry:
+                        18</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">
+                        Profitability: 19%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Monthly/Quarterly Revenue Trends</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+              <div class="reports-tabs-content-block reports-tabs-сontent-admin" id="reports-admin-AgentProductivity">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Agent Ranking</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Business: 18.725</div>
+                      <div class="reports-content-info-container-block-row-block">Private: 10.365</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Top Agents by Revenue</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Industry:
+                        18</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">
+                        Profitability: 19%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Policy Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+              <div class="reports-tabs-content-block reports-tabs-сontent-admin" id="reports-admin-clientOverview">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Client Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Total: 28.443</div>
+                      <div class="reports-content-info-container-block-row-block">Growth: +0.3%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Revenue by Country</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Counties:
+                        9</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Claim
+                        Payout: 3.000</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Policy Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </section>
+    </div>
+
+
+    <div class="nav-site" id="admin-Business">
+      <section class="section">
+        <div class="contols-panel" style="justify-content: space-between;">
+          <div class="" style="width: 85px;height: 110px;"></div>
+          <div class="controls-panel">
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/1.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Check Customer</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/2.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Meeting</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/3.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Task</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/4.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Compare Policies</p>
+            </div>
+          </div>
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image admin-img">
+            <p class="user-info-text admin-name">Gil Dvir</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content-input">
+            <input type="text" placeholder="Search" class="content-input-inner">
+          </div>
+          <div class="content-info">
+            <div class="content-info-container">
+              <div class="content-info-text">
+                <p>Business -&nbsp;</p>
+                <p class="curent-section">All</p>
+              </div>
+              <div class="content-info-func">
+                <img src="image/login-page/reports/func-1.svg" alt="" class="reports-content-info-func-img">
+                <img src="image/login-page/reports/func-2.svg" alt="" class="reports-content-info-func-img">
+                <img src="image/login-page/reports/func-3.svg" alt="" class="reports-content-info-func-img">
+              </div>
+              <div class="" style="width: 175px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="business-list">
+
+
+          <div class="business-list-nav">
+            <div class="business-list-nav-block">
+              <div class="business-list-nav-block-button" id="open-sort-business-list">Sort</div>
+              <!-- <div class="business-list-nav-block-button">Show\Hide</div> -->
+            </div>
+            <div class="business-list-nav-block">
+              <div class="business-list-nav-block-button-add" id="open-Business-Menu">Add</div>
+              <div class="business-list-nav-block-button-delete" id="open-Business-delete-menu">Delete</div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="business-list-container">
+            <div class="business-list-container-titles">
+              <div class="business-list-container-title">ID Company</div>
+              <div class="business-list-container-title">Company Name</div>
+              <div class="business-list-container-title">Polices</div>
+              <div class="business-list-container-title">Request</div>
+              <div class="business-list-container-title">Employees</div>
+              <div class="business-list-container-title">Notes</div>
+              <div class="business-list-container-title">Alerts</div>
+              <div class="business-list-container-title">Agent</div>
+              <div class="business-list-container-title">Details</div>
+            </div>
+            <div class="container-for-content" id="place-for-business-card">
+
+            </div>          
+          </div>
+
+          
+        </div>
+
+        <div class="sort-business-list" id="sort-business-list">
+          <div class="sort-business-list-container">
+            <h2 style="font-size: 18px;font-weight: 600;">Sorting</h2>
+            <div class="sort-business-list-flex">
+              Sort by:
+              <select id="sort-by-business-list">
+                <option value="idCompany">ID Company</option>
+                <option value="polices">Policies</option>
+                <option value="request">Request</option>
+                <option value="employees">Employees</option>
+                <option value="notes">Notes</option>
+                <option value="alerts">Alerts</option>
+              </select>
+            </div>
+            <div class="sort-business-list-flex">
+              Order:
+              <select id="order-business-list">
+                <option value="up">Ascending</option>
+                <option value="down">Descending</option>
+              </select>
+            </div>
+            <div class="sort-business-list-flex" style="justify-content: center;gap: 10px;margin-top: 10px;">
+              <div class="sort-business-list-flex-button-sort" id="do-sort-business-list">Sort</div>
+              <div class="sort-business-list-flex-button-close" id="close-sort-business-list">Close</div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="delete-business-from-list" id="delete-menu-business">
+          <div class="delete-business-from-list-container">
+            <h2 style="font-size: 18px;font-weight: 600;">Delete Company</h2>
+            <input type="text" class="delete-business-from-list-input" placeholder="Enter ID company" id="delete-business-menu-input">
+            <div class="alarm-delete-business-menu">ㅤ</div>
+            <div class="delete-business-from-list-buttons">
+              <div class="delete-business-from-list-button-delete" id="delete-business-button">Delete</div>
+              <div class="delete-business-from-list-button-close" id="close-business-delete-menu">Close</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="add-to-business-list" id="Business-Menu">
+          <div class="add-to-business-list-container">
+            <h2 class="add-to-business-list-title">Add Business</h2>
+            <div class="business-list-container-titles">
+              <div class="business-list-container-title">ID Company</div>
+              <div class="business-list-container-title">Company Name</div>
+              <div class="business-list-container-title">Polices</div>
+              <div class="business-list-container-title">Request</div>
+              <div class="business-list-container-title">Employees</div>
+              <div class="business-list-container-title">Notes</div>
+              <div class="business-list-container-title">Alerts</div>
+              <div class="business-list-container-title">Agent</div>
+            </div>
+            <div class="business-list-container-card">
+              <input placeholder="ID Company" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Company Name" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Polices" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Request" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Employees" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Notes" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Alerts" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Agent" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+            </div>
+            <div class="business-list-add-alarm">ㅤ</div>
+            <div class="add-nav">
+              <div class="business-list-nav-block">
+                <div class="business-list-nav-block-button-add" id="add-Business-Menu">Add</div>
+                <div class="business-list-nav-block-button-close" id="close-Business-Menu">Close</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </section>
+    </div>
+    <div class="nav-site" id="admin-Customers">
+      <section class="section">
+        <div class="contols-panel" style="justify-content: space-between;">
+          <div class="" style="width: 85px;height: 110px;"></div>
+          <div class="controls-panel">
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/1.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Check Customer</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/2.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Meeting</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/3.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Task</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/4.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Compare Policies</p>
+            </div>
+          </div>
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image admin-img">
+            <p class="user-info-text admin-name">Gil Dvir</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content-input">
+            <input type="text" placeholder="Search" class="content-input-inner">
+          </div>
+          <div class="content-info">
+            <div class="content-info-container">
+              <div class="content-info-text">
+                <p>Customers -&nbsp;</p>
+                <p class="curent-section">All</p>
+              </div>
+              <div class="content-info-func">
+                <img src="image/login-page/reports/func-1.svg" alt="" class="reports-content-info-func-img">
+                <img src="image/login-page/reports/func-2.svg" alt="" class="reports-content-info-func-img">
+                <img src="image/login-page/reports/func-3.svg" alt="" class="reports-content-info-func-img">
+              </div>
+              <div class="" style="width: 175px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="customer-list">
+
+
+          <div class="customer-list-nav">
+            <div class="customer-list-nav-block">
+              <div class="customer-list-nav-block-button" id="open-sort-customer-list">Sort</div>
+              <!-- <div class="customer-list-nav-block-button">Show\Hide</div> -->
+            </div>
+            <div class="customer-list-nav-block">
+              <div class="customer-list-nav-block-button-add" id="open-Customer-Menu">Add</div>
+              <div class="customer-list-nav-block-button-delete" id="open-customer-delete-menu">Delete</div>
+            </div>
+          </div>
+
+          <div class="customer-list-container">
+            <div class="customer-list-container-titles">
+              <div class="customer-list-container-title">ID Employee</div>
+              <div class="customer-list-container-title" style="max-width: 210px;">Name</div>
+              <div class="customer-list-container-title">Phone</div>
+              <div class="customer-list-container-title">Country</div>
+              <div class="customer-list-container-title">Status</div>
+              <div class="customer-list-container-title">Notes</div>
+              <div class="customer-list-container-title">Alerts</div>
+              <div class="customer-list-container-title">Agent</div>
+              <div class="customer-list-container-title">Details</div>
+            </div>
+            <div class="container-for-content" id="place-for-customer-card">
+              <div class="customer-list-container-card">
+                <div class="customer-list-container-card-text">Empty</div>
+                <div class="customer-list-container-card-text" style="max-width: 210px;">Empty</div>
+                <div class="customer-list-container-card-text">Empty</div>
+                <div class="customer-list-container-card-text">Empty</div>
+                <div class="customer-list-container-card-status-block Active">Empty</div>
+                <div class="customer-list-container-card-text underline">Empty</div>
+                <div class="customer-list-container-card-text underline">Empty</div>
+                <div class="customer-list-container-card-text underline">Gil Empty</div>
+                <div class="customer-list-container-card-text">
+                  <div class="customer-list-container-card-text-details">Empty</div>
+                </div>
+              </div>
+            </div>          
+          </div>
+
+
+
+        </div>
+
+        <div class="add-to-customer-list" id="Customers-Add-Menu">
+          <div class="add-to-customer-list-container">
+            <h2 class="add-to-customer-list-title">Add Customers</h2>
+            <div class="customer-list-container-titles">
+              <div class="customer-list-container-title">ID Employee</div>
+              <div class="customer-list-container-title" style="max-width: 210px;">Name</div>
+              <div class="customer-list-container-title">Phone</div>
+              <div class="customer-list-container-title" style="max-width: 180px;">Country</div>
+              <div class="customer-list-container-title">Status</div>
+              <div class="customer-list-container-title">Notes</div>
+              <div class="customer-list-container-title">Alerts</div>
+              <div class="customer-list-container-title">Agent</div>
+              <!-- <div class="customer-list-container-title">Details</div> -->
+            </div>
+            <div class="container-for-inputs">
+              <input placeholder="ID Employee" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Name" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;max-width: 210px;border-radius: 10px;">
+              <input placeholder="Phone" type="tel" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Country" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 180px;">
+              <!-- <input type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;"> -->
+              <select class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+                <option value="Empty">Empty</option>
+                <option value="Active">Active</option>
+                <option value="Pending">Pending</option>
+                <option value="Canceled">Canceled</option>
+              </select>
+              <input placeholder="Notes" type="number" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Alerts" type="number" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Agent" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+            </div> 
+
+            
+            <div class="customers-list-add-alarm">ㅤ</div>
+            <div class="add-nav">
+              <div class="customer-list-nav-block">
+                <div class="customer-list-nav-block-button-add" id="add-customer-Menu">Add</div>
+                <div class="customer-list-nav-block-button-close" id="close-customer-Menu">Close</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="delete-customer-from-list" id="delete-menu-customer">
+          <div class="delete-customer-from-list-container">
+            <h2 style="font-size: 18px;font-weight: 600;">Delete Customer</h2>
+            <input type="text" class="delete-customer-from-list-input" placeholder="Enter ID Employee" id="delete-customer-menu-input">
+            <div class="alarm-delete-customer-menu">ㅤ</div>
+            <div class="delete-customer-from-list-buttons">
+              <div class="delete-customer-from-list-button-delete" id="delete-customer-button">Delete</div>
+              <div class="delete-customer-from-list-button-close" id="close-customer-delete-menu">Close</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sort-customer-list" id="sort-customer-list">
+          <div class="sort-customer-list-container">
+            <h2 style="font-size: 18px;font-weight: 600;">Sorting</h2>
+            <div class="sort-customer-list-flex">
+              Sort by:
+              <select id="sort-by-customer-list">
+                <option value="IdEmployee">ID Employee</option>
+                <option value="status">Status</option>
+                <option value="notes">Notes</option>
+                <option value="alerts">Alerts</option>
+              </select>
+            </div>
+            <div class="sort-customer-list-flex">
+              Order:
+              <select id="order-customer-list">
+                <option value="up">Ascending</option>
+                <option value="down">Descending</option>
+              </select>
+            </div>
+            <div class="sort-customer-list-flex" style="justify-content: center;gap: 10px;margin-top: 10px;">
+              <div class="sort-customer-list-flex-button-sort" id="do-sort-customer-list">Sort</div>
+              <div class="sort-customer-list-flex-button-close" id="close-sort-customer-list">Close</div>
+            </div>
+          </div>
+        </div>  
+
+      </section>
+    </div>
+
+  </section>
+
+  <section class="brocker-page">
+    <header class="header">
+      <h2 class="header-logo-bold">
+        ALEX<span style="font-weight: 400;">CIMPS</span>
+      </h2>
+      <nav class="header-nav">
+        <p class="nav-button" data-nav="brocker-myProfile">My profile</p>
+        <p class="nav-button focus" data-nav="brocker-settings" id="nav-brocker-set">Settings</p>
+        <button class="log-out">Logout</button>
+      </nav>
+    </header>
+
+    <div class="nav-site active" id="brocker-settings">
+      <section class="settings-section">
+        <div class="contols-panel">
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image brocker-img" id="brocker-img">
+            <p class="user-info-text brocker-name" id="brocker-name">Gil Dvir</p>
+          </div>
+        </div>
+
+        <div class="settings-swiper">
+          <div class="contols-brocker-button-swiper-left">
+            <img src="image/icons/button-swiper-prev.svg" alt="" class="contols-button-swiper-image">
+            <p class="control-text-swiper">Back</p>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="slider-brocker-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Step 1.</span> Select the buttons you
+                need for the quick access menu.</p>
+              <div class="slider-wrapper-content">
+                <div class="slider-wrapper-content-card">
+                  <h3 class="slider-wrapper-content-card-title">Check Customer</h3>
+                  <img src="image/slider/slide-1-1.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background-color: #FF5454;">
+                  <h3 class="slider-wrapper-content-card-title">Add Meeting</h3>
+                  <img src="image/slider/slide-1-2.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button ">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background: #08ccd4;">
+                  <h3 class="slider-wrapper-content-card-title">Compare Policies</h3>
+                  <img src="image/slider/slide-1-3.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button">Add</button>
+                </div>
+                <div class="slider-wrapper-content-card" style="background: #d0e46c;">
+                  <h3 class="slider-wrapper-content-card-title">Compare Policies</h3>
+                  <img src="image/slider/slide-1-4.png" alt="" class="slider-wrapper-content-card-img">
+                  <button class="slider-wrapper-content-button">Add</button>
+                </div>
+              </div>
+            </div>
+            <div class="slider-brocker-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Step 2.</span> Select the buttons you
+                need for the quick access menu.</p>
+              <div class="slider-wrapper-content" style="align-items: center;">
+                <img src="image/slider/slide-2-main.png" alt="" class="swiper-wrapper-slide-form-img">
+                <div class="swiper-wrapper-slide-form">
+                  <input type="text" name="" id="" class="swiper-wrapper-slide-form-input"
+                    placeholder="Google Drive Contact List">
+                  <button class="swiper-wrapper-slide-form-button">Connect</button>
+                </div>
+              </div>
+            </div>
+            <div class="slider-brocker-wrapper-slide">
+              <h2 class="slider-wrapper-slide-title">Here are your personal settings</h2>
+              <p class="slider-wrapper-slide-text"><span style="font-weight: 700;">Here, you will find the user role
+                  settings, where you can assign permissions and restrictions to users based on their roles in the
+                  system.</p>
+              <div class="slider-wrapper-cards">
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title">Finance</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Oversees financial <br>
+                    reporting and payments.</h3>
+                  <p class="slider-wrapper-card-text">Responsible for overseeing financial reporting, tracking payments,
+                    and ensuring the smooth processing of transactions.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #d0e46c;">HR Department</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Focuses on monitoring agent productivity.</h3>
+                  <p class="slider-wrapper-card-text">Manages system settings, assigns user roles, and controls
+                    permissions, ensuring that the system operates smoothly and securely.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #f8740c;">Administrator</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Manages system
+                    settings and user roles.</h3>
+                  <p class="slider-wrapper-card-text">Engage directly with clients, handling interactions, policy sales,
+                    and providing tailored insurance solutions.</p>
+                </div>
+                <div class="slider-wrapper-card">
+                  <h2 class="slider-wrapper-card-title" style="background: #08ccac;">HR</h2>
+                  <h3 class="slider-wrapper-card-undertitle">Focuses on monitoring agent productivity.</h3>
+                  <p class="slider-wrapper-card-text">Focuses on monitoring and improving agent productivity, ensuring
+                    the team is performing efficiently and meeting performance targets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contols-brocker-button-swiper-right">
+            <img src="image/icons/button-swiper-next.svg" alt="" class="contols-button-swiper-image">
+            <p class="control-text-swiper">Next</p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-img-row">
+            <img src="image/login-page/fb-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/twit-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/inst-footer.svg" alt="" class="footer-img-row-image">
+            <img src="image/login-page/youtube-footer.svg" alt="" class="footer-img-row-image">
+          </div>
+        </footer>
+      </section>
+    </div>
+    <div class="nav-site" id="brocker-myProfile">
+      <section class="settings-section">
+        <div class="contols-panel" style="justify-content: space-between;">
+          <div class="" style="width: 85px;height: 110px;"></div>
+          <div class="controls-panel">
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/1.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Check Customer</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/2.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Meeting</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/3.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Add Task</p>
+            </div>
+            <div class="contols-panel-card">
+              <img src="image/login-page/setting/4.png" alt="" class="contols-panel-card-img">
+              <p class="contols-panel-card-text">Compare Policies</p>
+            </div>
+          </div>
+          <div class="user-info">
+            <img src="image/users/admin-logo.svg" alt="" class="user-info-image brocker-img" id="brocker-img">
+            <p class="user-info-text brocker-name" id="brocker-name">Gil Dvir</p>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content-input">
+            <input type="text" placeholder="Search" class="content-input-inner">
+          </div>
+          <div class="content-info">
+            <div class="content-info-container">
+              <div class="content-info-text">
+                <p>My Profile -&nbsp;</p>
+                <p class="curent-section brocker-curent-section">Revenue Analytics</p>
+              </div>
+              <div class="content-info-func">
+                <img src="image/login-page/reports/func-1.svg" alt="" class="content-info-func-img">
+                <img src="image/login-page/reports/func-2.svg" alt="" class="content-info-func-img">
+                <img src="image/login-page/reports/func-3.svg" alt="" class="content-info-func-img">
+              </div>
+              <div class="" style="width: 175px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-for-color">
+          <div class="reports-tabs">
+            <div class="reports-tabs-titles">
+              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-MyCustomers">My Customers</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker">My Meetings</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker">My Tasks</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-CompanyUpdates">Company Updates</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-PoliciesUpdates">Policies Updates</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker active" data-reports="reports-brocker-RevenueAnalytics">Revenue Analytics</p>
+            </div>
+            <div class="reports-tabs-content">
+
+              <div class="reports-tabs-content-block reports-tabs-content-brocker active" id="reports-brocker-RevenueAnalytics">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Revenue by Client Type</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Business: 18.725</div>
+                      <div class="reports-content-info-container-block-row-block">Private: 10.365</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">High-Value Clients</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Industry:
+                        18</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">
+                        Profitability: 19%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Monthly/Quarterly Revenue Trends</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+              <div class="reports-tabs-content-block reports-tabs-content-brocker " id="reports-brocker-PoliciesUpdates">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Agent Ranking</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Business: 18.725</div>
+                      <div class="reports-content-info-container-block-row-block">Private: 10.365</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Top Agents by Revenue</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Industry:
+                        18</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">
+                        Profitability: 19%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Policy Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-2-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+              <div class="reports-tabs-content-block reports-tabs-content-brocker" id="reports-brocker-CompanyUpdates">
+                <div class="reports-tabs-content-block-container">
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Client Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block">Total: 28.443</div>
+                      <div class="reports-content-info-container-block-row-block">Growth: +0.3%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-1.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Revenue by Country</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Counties:
+                        9</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #afafed;">Claim
+                        Payout: 3.000</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-2.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                  <div class="reports-content-info-container-block">
+                    <h2 class="reports-content-info-container-block-title">Policy Segmentation</h2>
+                    <div class="reports-content-info-container-block-row">
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Total:
+                        28.748</div>
+                      <div class="reports-content-info-container-block-row-block" style="background: #d8d4ac;">Growth:
+                        21%</div>
+                    </div>
+                    <img src="image/login-page/reports/Revenue-3-3.png" alt=""
+                      class="reports-content-info-container-block-img">
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-Customer-list  reports-tabs-content-brocker" id="reports-brocker-MyCustomers">
+
+
+                <div class="business-list-nav">
+                  <div class="business-list-nav-block">
+                    <div class="business-list-nav-block-button">Sort</div>
+                    <!-- <div class="business-list-nav-block-button">Show\Hide</div> -->
+                  </div>
+                  <div class="business-list-nav-block">
+                    <div class="business-list-nav-block-button-add" >Add</div>
+                    <div class="business-list-nav-block-button-delete" >Delete</div>
+                  </div>
+                </div>
+      
+      
+      
+      
+      
+                <div class="business-list-container">
+                  <div class="business-list-container-titles">
+                    <div class="business-list-container-title">ID Company</div>
+                    <div class="business-list-container-title">Company Name</div>
+                    <div class="business-list-container-title">Polices</div>
+                    <div class="business-list-container-title">Request</div>
+                    <div class="business-list-container-title">Employees</div>
+                    <div class="business-list-container-title">Notes</div>
+                    <div class="business-list-container-title">Alerts</div>
+                    <div class="business-list-container-title">Agent</div>
+                    <div class="business-list-container-title">Details</div>
+                  </div>
+                  <div class="container-for-content">
+      
+                  </div>          
+                </div>
+      
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </section>
+
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
