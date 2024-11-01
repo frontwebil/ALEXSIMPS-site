@@ -13,6 +13,8 @@ const adminNames = document.querySelectorAll(".admin-name");
 const adminImgs = document.querySelectorAll(".admin-img");
 const brockerNames = document.querySelectorAll(".brocker-name");
 const brockerImgs = document.querySelectorAll(".brocker-img");
+let currentSlideIndexAdmin = 0;
+
 
 const userCookie = document.cookie
   .split("; ")
@@ -187,7 +189,6 @@ const buttonNextAdmin = document.querySelector(
 );
 const slidesAdmin = document.querySelectorAll(".slider-admin-wrapper-slide");
 
-let currentSlideIndexAdmin = 0;
 
 function showSlideAdmin() {
   slidesAdmin[currentSlideIndexAdmin].classList.add("active");
