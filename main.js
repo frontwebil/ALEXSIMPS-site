@@ -4,11 +4,47 @@ import { USERS } from "./consts/users.js";
 
 const loginPage = document.querySelector(".login-page");
 const adminPage = document.querySelector(".admin-page");
-const brockerPage = document.querySelector('.brocker-page')
+const brockerPage = document.querySelector(".brocker-page");
 const loginInput = document.getElementById("login-input-login");
 const passwordInput = document.getElementById("login-input-password");
 const loginFormButton = document.getElementById("login-form-button");
 const loginFormStatus = document.getElementById("login-form-status");
+const adminNames = document.querySelectorAll(".admin-name");
+const adminImgs = document.querySelectorAll(".admin-img");
+const brockerNames = document.querySelectorAll(".brocker-name");
+const brockerImgs = document.querySelectorAll(".brocker-img");
+
+const userCookie = document.cookie
+  .split("; ")
+  .find((row) => row.startsWith("user="));
+
+if (userCookie) {
+  const userObject = JSON.parse(decodeURIComponent(userCookie.split("=")[1]));
+  if (userObject.role === "admin") {
+    loginPage.classList.toggle("active");
+    adminPage.classList.toggle("active");
+    currentSlideIndexAdmin = 0;
+    adminImgs.forEach((el) => {
+      el.src = userObject.img;
+    });
+    adminNames.forEach((el) => {
+      el.innerHTML = userObject.name;
+    });
+  } else if (userObject.role === "brocker") {
+    loginPage.classList.toggle("active");
+    brockerPage.classList.toggle("active");
+
+    brockerImgs.forEach((el) => {
+      el.src = userObject.img;
+    });
+    brockerNames.forEach((el) => {
+      el.innerHTML = userObject.name;
+    });
+  }
+  console.log(userObject);
+} else {
+  console.log("Кукі 'user' відсутнє.");
+}
 
 loginFormButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -40,10 +76,19 @@ loginFormButton.addEventListener("click", (e) => {
 
   if (user) {
     if (user.role === "admin") {
+      // Cookies
+      const currentUser = {
+        name: user.name,
+        role: user.role,
+        img: user.imgUser,
+      };
+      document.cookie = `user=${encodeURIComponent(
+        JSON.stringify(currentUser)
+      )}; path=/;`;
+
       loginFormStatus.innerHTML = ". <br><br>";
       loginFormStatus.style.color = "transparent";
-      let adminNames = document.querySelectorAll(".admin-name");
-      let adminImgs = document.querySelectorAll(".admin-img");
+
       currentSlideIndexAdmin = 0;
       adminImgs.forEach((el) => {
         el.src = user.imgUser;
@@ -67,16 +112,19 @@ loginFormButton.addEventListener("click", (e) => {
 
       document.getElementById("nav-admin-set").classList.add("focus");
       document.getElementById("admin-Settings").classList.add("active");
-    }
-    
-    else if (user.role === "brocker") {
+    } else if (user.role === "brocker") {
+      const currentUser = {
+        name: user.name,
+        role: user.role,
+        img: user.imgUser,
+      };
+      document.cookie = `user=${encodeURIComponent(
+        JSON.stringify(currentUser)
+      )}; path=/;`;
+
       loginFormStatus.innerHTML = ". <br><br>";
       loginFormStatus.style.color = "transparent";
       currentSlideIndexBrocker = 0;
-      let brockerNames = document.querySelectorAll(".brocker-name");
-      console.log(brockerNames)
-      let brockerImgs = document.querySelectorAll(".brocker-img");
-      console.log(brockerImgs)
 
 
       brockerImgs.forEach((el) => {
@@ -102,10 +150,8 @@ loginFormButton.addEventListener("click", (e) => {
 
       document.getElementById("nav-brocker-set").classList.add("focus");
       document.getElementById("brocker-settings").classList.add("active");
-
     }
   } else {
-
     loginFormStatus.innerHTML = "Incorrect login or password";
     loginFormStatus.style.color = "red";
     return;
@@ -115,6 +161,11 @@ loginFormButton.addEventListener("click", (e) => {
 const logOutButton = document.querySelectorAll(".log-out");
 
 function logOut(e) {
+  document.cookie.split(";").forEach((cookie) => {
+    const cookieName = cookie.split("=")[0].trim();
+    document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  });
+
   let parent = e.target.closest("section");
   parent.classList.toggle("active");
   loginPage.classList.toggle("active");
@@ -122,14 +173,18 @@ function logOut(e) {
   loginFormStatus.style.color = "transparent";
 }
 
-logOutButton.forEach(el=>{
+logOutButton.forEach((el) => {
   el.addEventListener("click", logOut);
-})
+});
 
 // SWIPER ADMIN
 
-const buttonPrevAdmin = document.querySelector(".contols-admin-button-swiper-left");
-const buttonNextAdmin = document.querySelector(".contols-admin-button-swiper-right");
+const buttonPrevAdmin = document.querySelector(
+  ".contols-admin-button-swiper-left"
+);
+const buttonNextAdmin = document.querySelector(
+  ".contols-admin-button-swiper-right"
+);
 const slidesAdmin = document.querySelectorAll(".slider-admin-wrapper-slide");
 
 let currentSlideIndexAdmin = 0;
@@ -179,7 +234,6 @@ const navSite = document.querySelectorAll(".nav-site");
 navButtons.forEach((el) => {
   el.addEventListener("click", (e) => {
     const tabsTarget = e.target.getAttribute("data-nav");
-    console.log(tabsTarget);
 
     navButtons.forEach((el) => {
       el.classList.remove("focus");
@@ -273,9 +327,9 @@ updateContainerForBusinessCards();
 const openBusinessMenu = document.getElementById("open-Business-Menu");
 const closeBusinessMenu = document.getElementById("close-Business-Menu");
 const addBusiness = document.getElementById("add-Business-Menu");
-const BusinessMenuContainer = document.querySelector(
-  ".add-to-business-list-container"
-);
+// const BusinessMenuContainer = document.querySelector(
+//   ".add-to-business-list-container"
+// );
 const inputsBusinessMenu = document.querySelectorAll(".inputs-business-list");
 const BusinessMenu = document.getElementById("Business-Menu");
 const BusinessMenuAlarmButton = document.querySelector(
@@ -364,8 +418,8 @@ function sortBusinessArray(array, key, order = "up") {
     } else {
       // Якщо значення - рядки, порівнюємо їх лексикографічно, ігноруючи регістр
       return order === "up"
-        ? aValue.localeCompare(bValue, undefined, { sensitivity: 'base' })
-        : bValue.localeCompare(aValue, undefined, { sensitivity: 'base' });
+        ? aValue.localeCompare(bValue, undefined, { sensitivity: "base" })
+        : bValue.localeCompare(aValue, undefined, { sensitivity: "base" });
     }
   });
 }
@@ -431,7 +485,7 @@ function removeCompanyById(inputValue) {
 
 deleteBusinessButton.addEventListener("click", () => {
   const valueInputIdCompany = deleteBusinessMenuInput.value;
-  alarmBusinessMenuDelete.classList.remove('succes')
+  alarmBusinessMenuDelete.classList.remove("succes");
   deleteBusinessMenuInput.value = "";
 
   if (!valueInputIdCompany) {
@@ -453,7 +507,7 @@ deleteBusinessButton.addEventListener("click", () => {
 
 // Customers
 
-import { customersAll } from "./consts/customers.js";
+import { customersAdmin } from "./consts/customersAdmin.js";
 
 const containerForCustomersCards = document.getElementById(
   "place-for-customer-card"
@@ -462,7 +516,7 @@ const containerForCustomersCards = document.getElementById(
 function updateContainerForCustomerCards() {
   containerForCustomersCards.innerHTML = "";
 
-  customersAll.forEach((el) => {
+  customersAdmin.forEach((el) => {
     containerForCustomersCards.innerHTML += `
               <div class="customer-list-container-card">
                 <div class="customer-list-container-card-text">${el.IdEmployee}</div>
@@ -483,24 +537,25 @@ function updateContainerForCustomerCards() {
 
 updateContainerForCustomerCards();
 
-
 // Add customer
 
-const openAddCustomerMenu = document.getElementById('open-Customer-Menu');
-const closeAddCustomerMenu = document.getElementById('close-customer-Menu');
-const customerAddMenu = document.getElementById('Customers-Add-Menu');
-const customerAddMenuAlarm = document.querySelector('.customers-list-add-alarm');
-const addCustomer = document.getElementById('add-customer-Menu');
-const addCustomersInputs = document.querySelectorAll('.customer-list-container-card-text-input');
+const openAddCustomerMenu = document.getElementById("open-Customer-Menu");
+const closeAddCustomerMenu = document.getElementById("close-customer-Menu");
+const customerAddMenu = document.getElementById("Customers-Add-Menu");
+const customerAddMenuAlarm = document.querySelector(
+  ".customers-list-add-alarm"
+);
+const addCustomer = document.getElementById("add-customer-Menu");
+const addCustomersInputs = document.querySelectorAll(
+  ".customer-list-container-card-text-input"
+);
 
-
-
-openAddCustomerMenu.addEventListener('click' , ()=>{
-  customerAddMenu.classList.toggle('active')
+openAddCustomerMenu.addEventListener("click", () => {
+  customerAddMenu.classList.toggle("active");
 });
 
-closeAddCustomerMenu.addEventListener('click' , ()=>{
-  customerAddMenu.classList.toggle('active')
+closeAddCustomerMenu.addEventListener("click", () => {
+  customerAddMenu.classList.toggle("active");
   customerAddMenuAlarm.innerHTML = "ㅤ";
 });
 
@@ -516,7 +571,7 @@ function addCustomerCard() {
 
   if (isEmpty) return;
 
-    customersAll.push({
+  customersAdmin.push({
     IdEmployee: addCustomersInputs[0].value,
     name: addCustomersInputs[1].value,
     phone: addCustomersInputs[2].value,
@@ -531,20 +586,14 @@ function addCustomerCard() {
   addCustomersInputs.forEach((el) => {
     el.value = "";
   });
-
-
 }
 
-addCustomer.addEventListener('click' , ()=>{
+addCustomer.addEventListener("click", () => {
   addCustomerCard();
   openSortCustomerList.classList.remove("active");
-
-})
-
-
+});
 
 // Delete Customer
-
 
 const openCustomerDeleteMenu = document.getElementById(
   "open-customer-delete-menu"
@@ -573,12 +622,12 @@ closeCustomerMenuButton.addEventListener("click", () => {
 });
 
 function removeCustomerById(inputValue) {
-  const index = customersAll.findIndex(
+  const index = customersAdmin.findIndex(
     (customer) => customer.IdEmployee === inputValue
   );
 
   if (index !== -1) {
-    customersAll.splice(index, 1);
+    customersAdmin.splice(index, 1);
     return true; // Елемент знайдено та видалено
   }
   alarmCustomerMenuDelete.classList.remove("succes");
@@ -594,7 +643,9 @@ deleteCustomerButton.addEventListener("click", () => {
     alarmCustomerMenuDelete.innerHTML = "The field cannot be empty";
     return;
   } else if (
-    !customersAll.some((customer) => customer.IdEmployee === valueInputIdCompany)
+    !customersAdmin.some(
+      (customer) => customer.IdEmployee === valueInputIdCompany
+    )
   ) {
     alarmCustomerMenuDelete.classList.remove("succes");
     alarmCustomerMenuDelete.innerHTML = "Customer not found!";
@@ -607,7 +658,6 @@ deleteCustomerButton.addEventListener("click", () => {
   }
 });
 
-
 //Sorting Customers
 
 const sortCustomerList = document.getElementById("sort-customer-list");
@@ -616,7 +666,7 @@ const closeSortCustomerList = document.getElementById(
   "close-sort-customer-list"
 );
 const openSortCustomerList = document.getElementById("open-sort-customer-list");
-console.log(openSortCustomerList)
+// console.log(openSortCustomerList)
 const selectSortingCustomerValue = document.getElementById(
   "sort-by-customer-list"
 );
@@ -644,19 +694,17 @@ function sortCustomerArray(array, key, order = "up") {
     } else {
       // Якщо значення - рядки, порівнюємо їх лексикографічно, ігноруючи регістр
       return order === "up"
-        ? aValue.localeCompare(bValue, undefined, { sensitivity: 'base' })
-        : bValue.localeCompare(aValue, undefined, { sensitivity: 'base' });
+        ? aValue.localeCompare(bValue, undefined, { sensitivity: "base" })
+        : bValue.localeCompare(aValue, undefined, { sensitivity: "base" });
     }
   });
 }
-
-
 
 doSortingCustomerList.addEventListener("click", () => {
   const sortByValue = selectSortingCustomerValue.value;
   const sortOptions = selectOptionsSortingCustomerValue.value;
 
-  const startArray = customersAll;
+  const startArray = customersAdmin;
 
   const sortedBusinessArray = sortCustomerArray(
     startArray,
@@ -664,9 +712,7 @@ doSortingCustomerList.addEventListener("click", () => {
     sortOptions
   );
 
-  console.log(customersAll)
-
-  
+  // console.log(customersAdmin)
 
   updateContainerForCustomerCards();
 
@@ -674,13 +720,17 @@ doSortingCustomerList.addEventListener("click", () => {
   sortCustomerList.classList.toggle("active");
 });
 
-
-
 // BROCKER slider
 
-const buttonPrevBrocker = document.querySelector(".contols-brocker-button-swiper-left");
-const buttonNextBrocker = document.querySelector(".contols-brocker-button-swiper-right");
-const slidesBrocker = document.querySelectorAll(".slider-brocker-wrapper-slide");
+const buttonPrevBrocker = document.querySelector(
+  ".contols-brocker-button-swiper-left"
+);
+const buttonNextBrocker = document.querySelector(
+  ".contols-brocker-button-swiper-right"
+);
+const slidesBrocker = document.querySelectorAll(
+  ".slider-brocker-wrapper-slide"
+);
 
 let currentSlideIndexBrocker = 0;
 
@@ -742,9 +792,17 @@ brockerReportsTabsButtons.forEach((el) => {
 
     brockercurentSection.innerHTML = e.target.innerHTML;
     let contentId = e.target.getAttribute("data-reports");
-    console.log(contentId)
+    // console.log(contentId)
 
     el.classList.add("active");
     document.getElementById(contentId).classList.add("active");
   });
+});
+
+// TEST
+
+const testInput = document.getElementById("test-input");
+
+testInput.addEventListener("input", () => {
+  // console.log(testInput.value)
 });

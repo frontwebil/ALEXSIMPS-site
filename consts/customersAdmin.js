@@ -1,4 +1,4 @@
-export const customersAll = [
+export const customersAdmin = [
   {
     IdEmployee: "EK652088",
     name: "Kumar Sahendra",
