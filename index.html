@@ -71,13 +71,13 @@
       <nav class="header-nav">
         <p class="nav-button" data-nav="admin-Business">Business</p>
         <p class="nav-button" data-nav="admin-Customers">Customers</p>
-        <p class="nav-button" data-nav="admin-Reports" id="nav-admin-rep">Reports</p>
-        <p class="nav-button focus" data-nav="admin-Settings" id="nav-admin-set">Settings</p>
+        <p class="nav-button focus" data-nav="admin-Reports" id="nav-admin-rep">Reports</p>
+        <p class="nav-button" data-nav="admin-Settings" id="nav-admin-set">Settings</p>
         <button class="log-out" id="log-out">Logout</button>
       </nav>
     </header>
 
-    <div class="nav-site active" id="admin-Settings" >
+    <div class="nav-site" id="admin-Settings">
       <section class="settings-section">
         <div class="contols-panel">
           <div class="user-info">
@@ -183,7 +183,7 @@
     </div>
 
 
-    <div class="nav-site " id="admin-Reports" >
+    <div class="nav-site active" id="admin-Reports">
       <section class="section">
         <div class="contols-panel" style="justify-content: space-between;">
           <div class="" style="width: 85px;height: 110px;"></div>
@@ -237,13 +237,17 @@
               <p class="reports-tabs-title-button reports-tabs-title-admin">Performance Indicators</p>
               <p class="reports-tabs-title-button reports-tabs-title-admin">Policy Sales Metrics</p>
               <p class="reports-tabs-title-button reports-tabs-title-admin">Policy Search & Comparison</p>
-              <p class="reports-tabs-title-button reports-tabs-title-admin" data-reports="reports-admin-clientOverview">Client Overview</p>
-              <p class="reports-tabs-title-button reports-tabs-title-admin" data-reports="reports-admin-AgentProductivity">Agent Productivity</p>
-              <p class="reports-tabs-title-button reports-tabs-title-admin active" data-reports="reports-admin-RevenueAnalytics">Revenue Analytics</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin" data-reports="reports-admin-clientOverview">
+                Client Overview</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin"
+                data-reports="reports-admin-AgentProductivity">Agent Productivity</p>
+              <p class="reports-tabs-title-button reports-tabs-title-admin active"
+                data-reports="reports-admin-RevenueAnalytics">Revenue Analytics</p>
             </div>
             <div class="reports-tabs-content">
 
-              <div class="reports-tabs-content-block reports-tabs-сontent-admin active" id="reports-admin-RevenueAnalytics">
+              <div class="reports-tabs-content-block reports-tabs-сontent-admin active"
+                id="reports-admin-RevenueAnalytics">
                 <div class="reports-tabs-content-block-container">
                   <div class="reports-content-info-container-block">
                     <h2 class="reports-content-info-container-block-title">Revenue by Client Type</h2>
@@ -439,10 +443,10 @@
             </div>
             <div class="container-for-content" id="place-for-business-card">
 
-            </div>          
+            </div>
           </div>
 
-          
+
         </div>
 
         <div class="sort-business-list" id="sort-business-list">
@@ -471,21 +475,23 @@
               <div class="sort-business-list-flex-button-close" id="close-sort-business-list">Close</div>
             </div>
           </div>
-        </div>  
+        </div>
 
-        <div class="delete-business-from-list" id="delete-menu-business">
+        <form onsubmit="event.preventDefault();" class="delete-business-from-list" id="delete-menu-business">
           <div class="delete-business-from-list-container">
             <h2 style="font-size: 18px;font-weight: 600;">Delete Company</h2>
-            <input type="text" class="delete-business-from-list-input" placeholder="Enter ID company" id="delete-business-menu-input">
+            <input type="text" class="delete-business-from-list-input" placeholder="Enter ID company"
+              id="delete-business-menu-input">
             <div class="alarm-delete-business-menu">ㅤ</div>
             <div class="delete-business-from-list-buttons">
-              <div class="delete-business-from-list-button-delete" id="delete-business-button">Delete</div>
+              <button type="submit" class="delete-business-from-list-button-delete"
+                id="delete-business-button">Delete</button>
               <div class="delete-business-from-list-button-close" id="close-business-delete-menu">Close</div>
             </div>
           </div>
-        </div>
+        </form>
 
-        <div class="add-to-business-list" id="Business-Menu">
+        <form onsubmit="event.preventDefault();" class="add-to-business-list" id="Business-Menu">
           <div class="add-to-business-list-container">
             <h2 class="add-to-business-list-title">Add Business</h2>
             <div class="business-list-container-titles">
@@ -499,24 +505,34 @@
               <div class="business-list-container-title">Agent</div>
             </div>
             <div class="business-list-container-card">
-              <input placeholder="ID Company" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Company Name" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Polices" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Request" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Employees" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Notes" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Alerts" type="number" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Agent" type="text" class="business-list-container-card-text inputs-business-list" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="ID Company" type="text" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Company Name" type="text"
+                class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Polices" type="number" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Request" type="number" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Employees" type="number"
+                class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Notes" type="number" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Alerts" type="number" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Agent" type="text" class="business-list-container-card-text inputs-business-list"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
             </div>
             <div class="business-list-add-alarm">ㅤ</div>
             <div class="add-nav">
               <div class="business-list-nav-block">
-                <div class="business-list-nav-block-button-add" id="add-Business-Menu">Add</div>
+                <button type="submit" class="business-list-nav-block-button-add" id="add-Business-Menu">Add</button>
                 <div class="business-list-nav-block-button-close" id="close-Business-Menu">Close</div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
 
 
 
@@ -611,14 +627,14 @@
                   <div class="customer-list-container-card-text-details">Empty</div>
                 </div>
               </div>
-            </div>          
+            </div>
           </div>
 
 
 
         </div>
 
-        <div class="add-to-customer-list" id="Customers-Add-Menu">
+        <form onsubmit="event.preventDefault();" class="add-to-customer-list" id="Customers-Add-Menu">
           <div class="add-to-customer-list-container">
             <h2 class="add-to-customer-list-title">Add Customers</h2>
             <div class="customer-list-container-titles">
@@ -633,45 +649,62 @@
               <!-- <div class="customer-list-container-title">Details</div> -->
             </div>
             <div class="container-for-inputs">
-              <input placeholder="ID Employee" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Name" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;max-width: 210px;border-radius: 10px;">
-              <input placeholder="Phone" type="tel" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Country" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 180px;">
+              <input placeholder="ID Employee" type="text" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Name" type="text" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;max-width: 210px;border-radius: 10px;">
+              <input placeholder="Phone" type="tel" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Country" type="text" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 180px;">
               <!-- <input type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;"> -->
-              <select class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <select class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
                 <option value="Empty">Empty</option>
                 <option value="Active">Active</option>
                 <option value="Pending">Pending</option>
                 <option value="Canceled">Canceled</option>
               </select>
-              <input placeholder="Notes" type="number" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Alerts" type="number" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-              <input placeholder="Agent" type="text" name="" id="" class="customer-list-container-card-text customer-list-container-card-text-input" style="border: 1px solid #cdcdcd;border-radius: 10px;">
-            </div> 
+              <input placeholder="Notes" type="number" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Alerts" type="number" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+              <input placeholder="Agent" type="text" name="" id=""
+                class="customer-list-container-card-text customer-list-container-card-text-input"
+                style="border: 1px solid #cdcdcd;border-radius: 10px;">
+            </div>
 
-            
+
             <div class="customers-list-add-alarm">ㅤ</div>
             <div class="add-nav">
               <div class="customer-list-nav-block">
-                <div class="customer-list-nav-block-button-add" id="add-customer-Menu">Add</div>
+                <button type="submit" class="customer-list-nav-block-button-add" id="add-customer-Menu">Add</button>
                 <div class="customer-list-nav-block-button-close" id="close-customer-Menu">Close</div>
               </div>
             </div>
 
           </div>
-        </div>
+        </form>
 
-        <div class="delete-customer-from-list" id="delete-menu-customer">
+        <form onsubmit="event.preventDefault();" class="delete-customer-from-list" id="delete-menu-customer">
           <div class="delete-customer-from-list-container">
             <h2 style="font-size: 18px;font-weight: 600;">Delete Customer</h2>
-            <input type="text" class="delete-customer-from-list-input" placeholder="Enter ID Employee" id="delete-customer-menu-input">
+            <input type="text" class="delete-customer-from-list-input" placeholder="Enter ID Employee"
+              id="delete-customer-menu-input">
             <div class="alarm-delete-customer-menu">ㅤ</div>
             <div class="delete-customer-from-list-buttons">
-              <div class="delete-customer-from-list-button-delete" id="delete-customer-button">Delete</div>
+              <button type="submit" class="delete-customer-from-list-button-delete"
+                id="delete-customer-button">Delete</button>
               <div class="delete-customer-from-list-button-close" id="close-customer-delete-menu">Close</div>
             </div>
           </div>
-        </div>
+        </form>
 
         <div class="sort-customer-list" id="sort-customer-list">
           <div class="sort-customer-list-container">
@@ -697,7 +730,7 @@
               <div class="sort-customer-list-flex-button-close" id="close-sort-customer-list">Close</div>
             </div>
           </div>
-        </div>  
+        </div>
 
       </section>
     </div>
@@ -710,13 +743,13 @@
         ALEX<span style="font-weight: 400;">CIMPS</span>
       </h2>
       <nav class="header-nav">
-        <p class="nav-button" data-nav="brocker-myProfile">My profile</p>
-        <p class="nav-button focus" data-nav="brocker-settings" id="nav-brocker-set">Settings</p>
+        <p class="nav-button focus" data-nav="brocker-myProfile">My profile</p>
+        <p class="nav-button" data-nav="brocker-settings" id="nav-brocker-set">Settings</p>
         <button class="log-out">Logout</button>
       </nav>
     </header>
 
-    <div class="nav-site active" id="brocker-settings">
+    <div class="nav-site" id="brocker-settings">
       <section class="settings-section">
         <div class="contols-panel">
           <div class="user-info">
@@ -822,7 +855,7 @@
         </footer>
       </section>
     </div>
-    <div class="nav-site" id="brocker-myProfile">
+    <div class="nav-site active" id="brocker-myProfile">
       <section class="settings-section">
         <div class="contols-panel" style="justify-content: space-between;">
           <div class="" style="width: 85px;height: 110px;"></div>
@@ -872,16 +905,22 @@
         <div class="container-for-color">
           <div class="reports-tabs">
             <div class="reports-tabs-titles">
-              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-MyCustomers">My Customers</p>
-              <p class="reports-tabs-title-button reports-tabs-title-brocker">My Meetings</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker"
+                data-reports="myProfile-brocker-MyCustomers">My Customers</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker"
+                data-reports="myProfile-brocker-MyMeetings">My Meetings</p>
               <p class="reports-tabs-title-button reports-tabs-title-brocker">My Tasks</p>
-              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-CompanyUpdates">Company Updates</p>
-              <p class="reports-tabs-title-button reports-tabs-title-brocker" data-reports="reports-brocker-PoliciesUpdates">Policies Updates</p>
-              <p class="reports-tabs-title-button reports-tabs-title-brocker active" data-reports="reports-brocker-RevenueAnalytics">Revenue Analytics</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker"
+                data-reports="myProfile-brocker-CompanyUpdates">Company Updates</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker"
+                data-reports="myProfile-brocker-PoliciesUpdates">Policies Updates</p>
+              <p class="reports-tabs-title-button reports-tabs-title-brocker active"
+                data-reports="myProfile-brocker-RevenueAnalytics active">Revenue Analytics</p>
             </div>
             <div class="reports-tabs-content">
 
-              <div class="reports-tabs-content-block reports-tabs-content-brocker active" id="reports-brocker-RevenueAnalytics">
+              <div class="reports-tabs-content-block reports-tabs-content-brocker active"
+                id="myProfile-brocker-RevenueAnalytics">
                 <div class="reports-tabs-content-block-container">
                   <div class="reports-content-info-container-block">
                     <h2 class="reports-content-info-container-block-title">Revenue by Client Type</h2>
@@ -916,7 +955,8 @@
                   </div>
                 </div>
               </div>
-              <div class="reports-tabs-content-block reports-tabs-content-brocker " id="reports-brocker-PoliciesUpdates">
+              <div class="reports-tabs-content-block reports-tabs-content-brocker "
+                id="myProfile-brocker-PoliciesUpdates">
                 <div class="reports-tabs-content-block-container">
                   <div class="reports-content-info-container-block">
                     <h2 class="reports-content-info-container-block-title">Agent Ranking</h2>
@@ -951,7 +991,8 @@
                   </div>
                 </div>
               </div>
-              <div class="reports-tabs-content-block reports-tabs-content-brocker" id="reports-brocker-CompanyUpdates">
+              <div class="reports-tabs-content-block reports-tabs-content-brocker"
+                id="myProfile-brocker-CompanyUpdates">
                 <div class="reports-tabs-content-block-container">
                   <div class="reports-content-info-container-block">
                     <h2 class="reports-content-info-container-block-title">Client Segmentation</h2>
@@ -986,45 +1027,547 @@
                   </div>
                 </div>
               </div>
-
-              <div class="my-Customer-list  reports-tabs-content-brocker" id="reports-brocker-MyCustomers">
+              <div class="my-Customer-list  reports-tabs-content-brocker" id="myProfile-brocker-MyCustomers">
 
 
                 <div class="business-list-nav">
                   <div class="business-list-nav-block">
-                    <div class="business-list-nav-block-button">Sort</div>
+                    <div class="business-list-nav-block-button" id="open-sort-customer-brocker-list">Sort</div>
                     <!-- <div class="business-list-nav-block-button">Show\Hide</div> -->
                   </div>
                   <div class="business-list-nav-block">
-                    <div class="business-list-nav-block-button-add" >Add</div>
-                    <div class="business-list-nav-block-button-delete" >Delete</div>
+                    <div class="business-list-nav-block-button-add" id="open-Customer-brocker-Menu">Add</div>
+                    <div class="business-list-nav-block-button-delete" id="open-customer-brocker-delete-menu">Delete
+                    </div>
                   </div>
                 </div>
-      
-      
-      
-      
-      
+
+
+
+
+
                 <div class="business-list-container">
                   <div class="business-list-container-titles">
-                    <div class="business-list-container-title">ID Company</div>
-                    <div class="business-list-container-title">Company Name</div>
-                    <div class="business-list-container-title">Polices</div>
-                    <div class="business-list-container-title">Request</div>
-                    <div class="business-list-container-title">Employees</div>
-                    <div class="business-list-container-title">Notes</div>
-                    <div class="business-list-container-title">Alerts</div>
-                    <div class="business-list-container-title">Agent</div>
+                    <div class="business-list-container-title">ID Customer</div>
+                    <div class="business-list-container-title" style="max-width: 170px;">Customer Name</div>
+                    <div class="business-list-container-title" style="max-width: 140px;">Polica</div>
+                    <div class="business-list-container-title" style="max-width: 133px;">Last Update</div>
+                    <div class="business-list-container-title" style="max-width: 201px;width: 100%;">Type</div>
+                    <div class="business-list-container-title" style="max-width: 115px;">Status</div>
+                    <div class="business-list-container-title">Phone</div>
+                    <div class="business-list-container-title" style="max-width: 100px;">Task</div>
                     <div class="business-list-container-title">Details</div>
                   </div>
-                  <div class="container-for-content">
-                    <input type="date" id="test-input" name="trip-start" value="2018-07-22" min="2018-11-01" max="2026-12-31" />
-                  </div>          
-                </div>
-      
-                
-              </div>
+                  <div class="container-for-content" id="place-for-brocker-customers" style="gap: 15px;">
+                    <div class="business-list-container-card">
+                      <div class="business-list-container-card-text">77265410</div>
+                      <div class="business-list-container-card-text" style="max-width: 170px;">Shushana Shimoni</div>
+                      <div class="business-list-container-card-text" style="max-width: 140px;">Minora Health</div>
+                      <div class="business-list-container-card-text" style="max-width: 133px;">23.06.23</div>
+                      <div class="business-list-container-card-text" style="max-width: 201px;width: 100%;">Annual Till:
+                        23.11.24</div>
+                      <div class="business-list-container-card-text" style="max-width: 115px;">Issued</div>
+                      <div class="business-list-container-card-text">0527696378</div>
+                      <div class="business-list-container-card-text underline"
+                        style="max-width: 100px;text-align: center;">1</div>
+                      <div class="business-list-container-card-text">
+                        <div class="business-list-container-card-text-details">Details</div>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="sort-brocker-list" id="sort-customer-brocker-list">
+                    <div class="sort-customer-list-container">
+                      <h2 style="font-size: 18px;font-weight: 600;">Sorting</h2>
+                      <div class="sort-customer-list-flex">
+                        Sort by:
+                        <select id="sort-by-customer-brocker-list">
+                          <option value="idCustomer">ID Customer</option>
+                          <option value="lastUpdate">Last update</option>
+                          <option value="type">Type</option>
+                          <option value="status">Status</option>
+                          <option value="task">Task</option>
+                        </select>
+                      </div>
+                      <div class="sort-customer-list-flex">
+                        Order:
+                        <select id="order-customer-brocker-list">
+                          <option value="up">Ascending</option>
+                          <option value="down">Descending</option>
+                        </select>
+                      </div>
+                      <div class="sort-customer-list-flex" style="justify-content: center;gap: 10px;margin-top: 10px;">
+                        <div class="sort-customer-list-flex-button-sort" id="do-sort-customer-brocker-list">Sort</div>
+                        <div class="sort-customer-list-flex-button-close" id="close-sort-customer-brocker-list">Close
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form onsubmit="event.preventDefault();" class="delete-customer-brocker-from-list"
+                    id="delete-menu-brocker-customer">
+                    <div class="delete-customer-from-list-container">
+                      <h2 style="font-size: 18px;font-weight: 600;">Delete Customer</h2>
+                      <input type="text" class="delete-customer-from-list-input" placeholder="Enter ID Customer"
+                        id="delete-customer-menu-brocker-input">
+                      <div class="alarm-delete-customer-brocker-menu">ㅤ</div>
+                      <div class="delete-customer-from-list-buttons">
+                        <button type="submit" class="delete-customer-from-list-button-delete"
+                          id="delete-customer-brocker-button">Delete</button>
+                        <div class="delete-customer-from-list-button-close" id="close-customer-brocker-delete-menu">
+                          Close</div>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form onsubmit="event.preventDefault();" class="add-to-customer-list" id="Customers-brocker-Add-Menu">
+                    <div class="add-to-customer-list-container" style="max-width: 1300px;">
+                      <h2 class="add-to-customer-list-title">Add Customers</h2>
+                      <div class="business-list-container-titles" style="max-width: 1225px;width: 100%;margin: 0 auto;">
+                        <div class="business-list-container-title">ID Customer</div>
+                        <div class="business-list-container-title" style="max-width: 170px;">Customer Name</div>
+                        <div class="business-list-container-title" style="max-width: 140px;">Polica</div>
+                        <div class="business-list-container-title" style="max-width: 133px;">Last Update</div>
+                        <div class="business-list-container-title" style="max-width: 201px;width: 100%;">Annual Till:
+                        </div>
+                        <div class="business-list-container-title" style="max-width: 115px;">Status</div>
+                        <div class="business-list-container-title">Phone</div>
+                        <div class="business-list-container-title" style="max-width: 100px;">Task</div>
+                      </div>
+                      <div class="container-for-inputs" style="max-width: 1225px;width: 100%;margin: 0 auto;">
+                        <input placeholder="ID Customer" type="text" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 160px;">
+                        <input placeholder="Customer Name" type="text" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 170px;">
+                        <input placeholder="Polica" type="text" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 140px;">
+                        <input placeholder="lastUpdate" type="date" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 133px;">
+                        <input placeholder="" type="date" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 201px;">
+                        <select
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 115px;">
+                          <option value="Issued">Issued</option>
+                          <option value="Draft">Draft</option>
+                        </select>
+                        <input placeholder="Phone" type="tel" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 160px;">
+                        <input placeholder="Tasks" type="text" name="" id=""
+                          class="customer-list-container-card-text brocker-customer-list-container-card-text-input"
+                          style="border: 1px solid #cdcdcd;border-radius: 10px;max-width: 100px;">
+
+                      </div>
+
+
+                      <div class="customers-brocker-list-add-alarm">ㅤ</div>
+                      <div class="add-nav">
+                        <div class="customer-list-nav-block">
+                          <button type="submit" class="customer-list-nav-block-button-add"
+                            id="add-customer-brocker-Menu">Add</button>
+                          <div class="customer-list-nav-block-button-close" id="close-customer-brocker-Menu">Close</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="my-Customer-list  reports-tabs-content-brocker " id="myProfile-brocker-MyMeetings">
+
+                <div class="business-list-nav">
+                  <div class="business-list-nav-block">
+                    <!-- <div class="business-list-nav-block-button">Show\Hide</div> -->
+                  </div>
+                  <div class="business-list-nav-block">
+                    <div class="business-list-nav-block-button-add" id="brocker-button-edit-meeting">Edit</div>
+                  </div>
+                </div>
+
+                <div class="brocker-myProfile-myMeetings">
+                  <div class="container-for-brocker-myMeetings">
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Sunday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Monday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Tuesday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Wednesday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Thursday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="brocker-meeting">
+                      <div class="brocker-meeting-title">Friday</div>
+                      <div class="brocker-meeting-content">
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">10:00-11:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">11:00-12:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">12:00-13:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">13:00-14:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">14:00-15:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                        <div class="brocker-meeting-time-row">
+                          <p class="brocker-meeting-time">15:00-16:00</p>
+                          <div class="brocker-meeting-time-block"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <form onsubmit="event.preventDefault();" class="brocker-myProfile-myMeetings-openEdit" id="brocker-myProfile-myMeetings-openEdit">
+                  <div class="brocker-myProfile-myMeetings-openEdit-container">
+                    <h3 class="brocker-myProfile-myMeetings-title">Edit Meetings</h3>
+                    <div class="container-for-brocker-myMeetings editBrockerMeetings">
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Sunday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Monday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Tuesday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Wednesday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Thursday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="brocker-meeting">
+                        <div class="brocker-meeting-title">Friday</div>
+                        <div class="brocker-meeting-content">
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">10:00-11:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">11:00-12:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">12:00-13:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">13:00-14:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">14:00-15:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                          <div class="brocker-meeting-time-row">
+                            <p class="brocker-meeting-time">15:00-16:00</p>
+                            <input type="text" class="brocker-meeting-block-text">
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="customer-list-nav-block" style="justify-content: center;margin-top: 20px;">
+                      <button type="submit" class="customer-list-nav-block-button-add" id="updateButton">Edit</button>
+                      <div class="customer-list-nav-block-button-close" id="brocker-meeting-edit-buttonClose">Close</div>
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
             </div>
           </div>
         </div>

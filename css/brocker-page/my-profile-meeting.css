@@ -1,0 +1,128 @@
+.brocker-myProfile-myMeetings {
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  background: #f8fcfc;
+  padding: 13px 13px 40px 13px;
+}
+.container-for-brocker-myMeetings {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.brocker-meeting {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 300px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+}
+
+.brocker-meeting-block-text{
+  min-height: 29px;
+  background: #fff;
+  /* max-width: 115px; */
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  align-content: center;}
+
+.brocker-meeting-content {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* align-items: center; */
+  background: #d8ecec;
+}
+
+.brocker-meeting-title {
+  background: #d8ecec;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+}
+.brocker-meeting-time-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.brocker-meeting-time {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 12px;
+  color: #000;
+  max-width: 67px;
+  width: 100%;
+}
+.brocker-meeting-time-block {
+  min-height: 29px;
+  background: #fff;
+  /* max-width: 115px; */
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.brocker-myProfile-myMeetings-openEdit {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.brocker-myProfile-myMeetings-openEdit-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e8e6e6;
+  border-radius: 10px;
+  background: #f8fcfc;
+  padding: 13px 13px 40px 13px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brocker-myProfile-myMeetings-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  padding: 10px 0 25px;
+}
+
+.brocker-myProfile-myMeetings-openEdit.active {
+  display: block;
+  animation: show 1s 1;
+}
+
+.container-for-colorInput {
+  width: 25px; 
+  height: 15px; /* або інша бажана висота */
+  background: url('public/image/icons/color-wheel.png') no-repeat center;
+  background-size: cover; /* покриває весь контейнер */
+  position: relative; /* для позиціонування інпута */
+}
+
+.input-color-brocker-meeting {
+  position: absolute; /* позиціонуємо інпут поверх фону */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* приховуємо інпут, щоб він не заважав */
+  cursor: pointer; /* додаємо курсор вказівник для зручності */
+}

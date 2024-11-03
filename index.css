@@ -4,6 +4,7 @@
 @import url(css/reset.css);
 @import url(css/brocker-page/brocker-page.css);
 @import url(css/brocker-page/myProfile-Customer-list.css);
+@import url(css/brocker-page/my-profile-meeting.css);
 
 /* body{
   background: linear-gradient(
@@ -29,4 +30,5 @@ html,
 body {
   position: relative;
   height: 100%;
+  padding-top: 40px;
 }
