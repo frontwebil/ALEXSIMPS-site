@@ -112,9 +112,7 @@
 .container-for-colorInput {
   width: 25px; 
   height: 15px; /* або інша бажана висота */
-  background: url('color-wheel.png');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('public/image/icons/color-wheel.png') no-repeat center;
   background-size: cover; /* покриває весь контейнер */
   position: relative; /* для позиціонування інпута */
 }
