@@ -775,6 +775,7 @@ const brockercurentSection = document.querySelector(".brocker-curent-section");
 const brockerReportsTabsButtons = document.querySelectorAll(
   ".reports-tabs-title-brocker"
 );
+console.log(brockerReportsTabsButtons)
 const reportsBrockerTabsContent = document.querySelectorAll(
   ".reports-tabs-content-brocker"
 );
@@ -790,7 +791,7 @@ brockerReportsTabsButtons.forEach((el) => {
 
     brockercurentSection.innerHTML = e.target.innerHTML;
     let contentId = e.target.getAttribute("data-reports");
-    // console.log(contentId)
+    console.log(document.getElementById(contentId))
 
     el.classList.add("active");
     document.getElementById(contentId).classList.add("active");
@@ -991,7 +992,7 @@ const addBrockerCustomersInputs = document.querySelectorAll(
   ".brocker-customer-list-container-card-text-input"
 );
 
-console.log(addBrockerCustomersInputs);
+// console.log(addBrockerCustomersInputs);
 
 openAddCustomerBrockerMenu.addEventListener("click", () => {
   customerBrockerAddMenu.classList.toggle("active");
